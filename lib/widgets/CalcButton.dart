@@ -24,10 +24,10 @@ class CalcButton extends StatelessWidget {
       child: SizedBox(
         width: 65,
         height: 65,
-        child: FlatButton(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(50.0),
-          ),
+        child: TextButton(
+          style:ButtonStyle(shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(18.0),))),  
           onPressed: () {
             callback(text);
           },
@@ -39,8 +39,8 @@ class CalcButton extends StatelessWidget {
               ),
             ),
           ),
-          color: fillColor != null ? Color(fillColor) : null,
-          textColor: Color(textColor),
+         // color: fillColor != null ? Color(fillColor) : null,
+          //textColor: Color(textColor),
         ),
       ),
     );
